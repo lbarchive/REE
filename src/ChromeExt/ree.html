@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>You are watching... REE!</title>
+<script src="https://www.google.com/jsapi"></script>
+<style>
+body {
+  background-color: #000;
+  overflow: hidden;
+  margin: 5px;
+}
+.ree {
+  position: fixed;
+  visibility: hidden;
+}
+</style>
+<script>
+var REE_icons = [];
+
+function resize() {
+  var REE = ">v<^";
+  var win_w = window.innerWidth;
+  var win_h = window.innerHeight;
+  var wh = (win_w > win_h) ? win_h : win_w;
+
+  for (var i=0; i<REE.length; i++) {
+    if (i < REE_icons.length)
+      document.body.removeChild(REE_icons[i]);
+
+    var c = document.createElement('canvas');
+    c.width  = wh;
+    c.height = wh;
+    c.className = 'ree';
+    c.style.left = (win_w - wh) / 2 + 'px';
+    c.style.top  = (win_h - wh) / 2 + 'px';
+
+    var ctx = c.getContext("2d");
+    ctx.font = '24px Julee';
+    ctx.textAlign    = 'center';
+    ctx.textBaseline = 'middle'; 
+
+    var w = ctx.measureText('<_>').width + 4;
+    var scale = c.width / w;
+    ctx.translate(c.width / 2, c.height / 2);
+    ctx.scale(scale, scale);
+
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)'
+    ctx.fillStyle   = 'rgba(  0,   0,   0, 0.9)'
+    ctx.strokeText(REE[i] + '_' + REE[i], 0, 0);
+    ctx.fillText(  REE[i] + '_' + REE[i], 0, 0);
+
+    if (i < REE_icons.length)
+      REE_icons[i] = c;
+    else
+      REE_icons.push(c);
+    document.body.appendChild(c);
+  }
+}
+
+function update_icon(idx) {
+  for (var i=0; i<REE_icons.length; i++)
+    REE_icons[i].style.visibility = (i == idx) ? 'visible' : 'hidden';
+  setTimeout(function(){update_icon(++idx % REE_icons.length)}, 250);
+}
+
+function load() {
+  window.onresize = resize;
+  resize();
+  update_icon(0);
+  }
+
+google.load("webfont", "1");
+
+google.setOnLoadCallback(function() {
+  WebFont.load({
+    google: {
+      families: [ 'Julee' ]
+    },
+    active: load
+    });
+});
+</script>
+</head>
+<body>
+</body>
+</html>

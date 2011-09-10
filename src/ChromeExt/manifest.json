@@ -1,0 +1,15 @@
+{
+  "name": "My name is REE",
+  "version": "1.0.0.1",
+  "description": "This little fellow wants to Chrome!",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+  "background_page": "background.html",
+  "browser_action": {},
+  "permissions": [
+    "tabs",
+    "http://fonts.googleapis.com/css*",
+    "http://themes.googleusercontent.com/static/fonts/julee/*"
+    ]
+}
