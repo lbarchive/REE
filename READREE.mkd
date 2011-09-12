@@ -8,14 +8,15 @@ You can also see me on [Chrome][chromeext].
 [REE]: http://livibetter.github.com/REE
 [chromeext]: https://chrome.google.com/webstore/detail/pnbnocepdeplllmpekobfogkcamidjnb?hl=en-US
 
-Teaching Me Languages
----------------------
+Teaching Me New Languages
+-------------------------
 
 I can speak:
 
- * Bash
- * Bookmarklet
- * Chrome Extension
+ * Bang
+ * Button on Bookmark Toolbar
+ * Chrome
+ * Snake
 
 I would love to learn more, would you help me? Please teach me to
 
