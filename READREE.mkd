@@ -17,7 +17,10 @@ I can speak:
  * Bookmarklet
  * Chrome Extension
 
-I would love to learn more, would you help me?
+I would love to learn more, would you help me? Please teach me to
+
+ * Speak in this order, `>_>`, then `v_v`, then `<_<`, then `^_^`. Make my eyes rolling clockwise.
+ * Speak in 0.25 second interval, but allow me to adjust if I want to. You know, rolling faster if I am super happy. Slower if I am sad.
 
 License
 -------
