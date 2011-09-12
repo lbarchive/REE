@@ -3,4 +3,4 @@ README
 
 Please read [READREE][READREE]. GitHub writes my name wrong. @_@
 
-[READREE]: blob/master/READREE.mkd
+[READREE]: REE/blob/master/READREE.mkd
